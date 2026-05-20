@@ -510,6 +510,7 @@ endif
 
 ifeq ($(cc-name),clang)
 include $(srctree)/scripts/Makefile.clang
+KBUILD_CFLAGS += -mllvm -polly -mllvm -polly-vectorizer=stripmine
 endif
 
 ifdef CONFIG_CC_IS_GCC
